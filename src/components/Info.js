@@ -24,6 +24,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 18,
     margin: 15,
   },
+  inputText: {
+    fontFamily: "PT serif",
+    fontSize: 20,
+    letterSpacing: 5,
+  },
   input: {
     display: "flex",
   },
@@ -31,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
     width: 200,
     fontFamily: "PT serif",
     fontSize: 18,
+    letterSpacing: 2,
   },
   textField: {
     fontFamily: "PT serif",
@@ -66,6 +72,17 @@ export default function Info() {
               variant="outlined"
               fullWidth
               className={classes.textField}
+              InputLabelProps={{
+                classes: {
+                  root: classes.inputText,
+                  focused: classes.inputText,
+                },
+              }}
+              InputProps={{
+                classes: {
+                  input: classes.inputText,
+                },
+              }}
             />
             <Button
               variant="contained"
