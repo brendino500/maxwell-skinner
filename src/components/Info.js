@@ -1,14 +1,11 @@
 import React from "react";
 import theme from "../theme";
-import { makeStyles } from "@material-ui/core/styles";
-import {
-  Grid,
-  Button,
-  TextField,
-  Typography,
-  ThemeProvider,
-  Container,
-} from "@material-ui/core/";
+import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
+import Grid from "@material-ui/core/Grid";
+import Button from "@material-ui/core/Button";
+import TextField from "@material-ui/core/TextField";
+import Typography from "@material-ui/core/Typography";
+import Container from "@material-ui/core/Container";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -27,29 +24,59 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 18,
     margin: 15,
   },
+  input: {
+    display: "flex",
+  },
+  button: {
+    width: 200,
+    fontFamily: "PT serif",
+    fontSize: 18,
+  },
+  textField: {
+    fontFamily: "PT serif",
+    fontSize: 18,
+  },
 }));
 
 export default function Info() {
   const classes = useStyles();
   return (
-    <Container className={classes.container}>
-      <Grid
-        container
-        direction="column"
-        justify="center"
-        alignItems="flex-start"
-      >
-        <Typography variant="h1" className={classes.mainText}>
-          Hello! We're launching pretty soon...
-        </Typography>
-        <Typography variant="text" className={classes.text}>
-          Want to be one of the firsts to know? Enter your email below and we'll
-          add you to our exclusive list and invite you to our launch party...
-        </Typography>
-        {/* <form noValidate autoComplete="off">
-          <TextField id="outlined-basic" label="Outlined" variant="Outlined" />
-        </form> */}
-      </Grid>
-    </Container>
+    <ThemeProvider theme={theme}>
+      <Container className={classes.container}>
+        <Grid
+          container
+          direction="column"
+          justify="center"
+          alignItems="flex-start"
+        >
+          <Typography variant="h1" className={classes.mainText}>
+            Hello! We're launching pretty soon...
+          </Typography>
+          <Typography variant="text" className={classes.text}>
+            Want to be one of the firsts to know? Enter your email below and
+            we'll add you to our exclusive list and invite you to our launch
+            party...
+          </Typography>
+        </Grid>
+        <form>
+          <div className={classes.input}>
+            <TextField
+              id="outlined-basic"
+              label="Email"
+              variant="outlined"
+              fullWidth
+              className={classes.textField}
+            />
+            <Button
+              variant="contained"
+              color="primary"
+              className={classes.button}
+            >
+              Yes please
+            </Button>
+          </div>
+        </form>
+      </Container>
+    </ThemeProvider>
   );
 }
