@@ -1,4 +1,3 @@
-// https://ibb.co/4tmzyKR
 import React from "react";
 import Info from "./Info";
 import image from "../assets/andi-rieger-OhHVGV4EUmA-unsplash.jpg";
