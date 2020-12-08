@@ -24,7 +24,7 @@ export default function Navbar() {
     <ThemeProvider theme={theme}>
       <div className={classes.root}>
         <AppBar
-          position="static"
+          position="fixed"
           color="transparent"
           style={{
             boxShadow: "0px 0px 0px 0px",
