@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
   },
   input: {
     display: "flex",
+    margin: 15,
   },
   button: {
     width: 200,
