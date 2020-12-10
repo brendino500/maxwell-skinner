@@ -1,8 +1,9 @@
 # 👞 Maxwell & Skinner
 
 December 2020
-
+<a href="https://maxwell-skinner.vercel.app/">
 ![homepage](src/assets/homepage.png)
+</a>
 
 ## 🚦 Overview
 
@@ -13,6 +14,8 @@ December 2020
 - React
 - Material UI
 - SASS
+- Versel
+- HTML
 - Whimsical
 
 ## 💥 Things I have learnt
