@@ -1,6 +1,8 @@
 # 👞 Maxwell & Skinner
 
-![homepage](https://ibb.co/37cr0cx)
+December 2020
+
+![homepage](src/assets/homepage.png)
 
 ## 🚦 Overview
 
